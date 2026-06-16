@@ -34,7 +34,7 @@ Pasar properti Yogyakarta berkembang pesat seiring pertumbuhan sektor pendidikan
 ## 💡 Solution
 
 Membangun sistem prediksi harga rumah berbasis **machine learning multi-model** yang:
-''
+
 Input: Lokasi + Luas Tanah + Luas Bangunan + Kamar Tidur + Kamar Mandi + Carport
 
 ↓
@@ -52,10 +52,10 @@ Stacking Ensemble (RF + GB + XGB → Ridge meta-learner)
 ↓
 
 Output: Prediksi Harga + Interval Kepercayaan + Analisis Geospasial
-''
+
 ---
 
-## 🔬 Apa yang Dilakukan dalam Model
+## 🔬 Apa yang Saya Lakukan
 
 ### 1️⃣ Data & Preprocessing
 - **Dataset:** 2.019 listing rumah Yogyakarta (setelah filter: 1.822 baris)
@@ -75,7 +75,7 @@ Output: Prediksi Harga + Interval Kepercayaan + Analisis Geospasial
 | `log_building` | `log1p(building_area)` | Normalisasi skew distribusi |
 
 ### 3️⃣ Model & Optimasi
-''
+
 Random Forest     → GridSearchCV (48 kombinasi × 5 fold = 240 fits)
 
 Gradient Boosting → GridSearchCV (32 kombinasi × 5 fold = 160 fits)
@@ -89,7 +89,7 @@ Ridge             → GridSearchCV + PolynomialFeatures (degree=2)
 ElasticNet        → GridSearchCV + PolynomialFeatures (degree=2)
 
 Stacking          → RF + GB + XGB → Ridge meta-learner (cv=5)
-''
+
 ### 4️⃣ Evaluasi Multi-Metrik
 
 | Metrik | Deskripsi | Kenapa Penting |
@@ -137,7 +137,7 @@ Stacking          → RF + GB + XGB → Ridge meta-learner (cv=5)
 - Output disimpan sebagai HTML interaktif di `backend/static/maps/yogyakarta_geo.html`
 
 **Hotspot harga tertinggi:**
-''
+
 🔵 Ngaglik, Sleman     → 303 listing (terbanyak)
 
 🔵 Depok, Sleman       → 197 listing
@@ -147,7 +147,7 @@ Stacking          → RF + GB + XGB → Ridge meta-learner (cv=5)
 🔵 Mlati, Sleman       → 122 listing
 
 🔵 Banguntapan, Bantul → 117 listing
-''
+
 ---
 
 ## 🛠️ Tech Stack
@@ -175,7 +175,7 @@ Stacking          → RF + GB + XGB → Ridge meta-learner (cv=5)
 ---
 
 ## 📁 Struktur Proyek
-''
+
 📦 house-price-prediction/
 
 ├── 📂 dataset/
@@ -215,7 +215,7 @@ Stacking          → RF + GB + XGB → Ridge meta-learner (cv=5)
 │           └── yogyakarta_geo.html
 
 └── README.md
-''
+
 ---
 
 ## ⚙️ Cara Menjalankan
@@ -263,7 +263,7 @@ print(f"Prediksi Harga: Rp {pred:,.0f}")
 ---
 
 ## 🧠 Skills yang Digunakan
-''
+
 Machine Learning       → Supervised Learning, Ensemble Methods, Stacking
 
 Feature Engineering    → Log-transform, Interaction Features, Ratio Features
@@ -281,7 +281,7 @@ Data Visualization     → Matplotlib, Seaborn, Learning Curve, Residual Analysi
 MLOps (Basic)          → Model Persistence (joblib), Pipeline Architecture
 
 Python                 → NumPy, Pandas, scikit-learn, XGBoost, LightGBM
-''
+
 ---
 
 ## 👤 Author
